@@ -254,6 +254,24 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+  -- Install trunk
+  	{
+		"trunk-io/neovim-trunk",
+		lazy = false,
+		-- optionally pin the version
+		-- tag = "v0.1.1",
+		-- these are optional config arguments (defaults shown)
+		config = {
+			-- trunkPath = "trunk",
+			-- lspArgs = {},
+			-- formatOnSave = true,
+                        -- formatOnSaveTimeout = 10, -- seconds
+			-- logLevel = "info"
+		},
+		main = "trunk",
+		dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
+	},
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
